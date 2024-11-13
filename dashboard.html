@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChemiMine - Panel de Usuario</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Bienvenido a ChemiMine</h1>
+</header>
+
+<main>
+  <!-- Chat Section -->
+  <section class="chat-section">
+    <h2>Chat de Reporte de Problemas</h2>
+    <div class="chat-box" id="chat-box">
+      <p><strong>Sistema:</strong> Bienvenido, ¿en qué podemos ayudarte?</p>
+    </div>
+    <input type="text" id="chat-input" placeholder="Escribe tu mensaje aquí...">
+    <button onclick="sendMessage()">Enviar</button>
+  </section>
+
+  <!-- Calculator Section -->
+  <section class="calculator-section">
+    <h2>Calculadora de Contaminación</h2>
+    <form onsubmit="calculateContamination(event)">
+      <label for="chemical">Nombre de la sustancia:</label>
+      <input type="text" id="chemical" required>
+      
+      <label for="quantity">Cantidad en kg:</label>
+      <input type="number" id="quantity" required>
+      
+      <button type="submit">Calcular Riesgo</button>
+    </form>
+    <p id="calculator-result"></p>
+  </section>
+</main>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
